@@ -19,9 +19,7 @@ main() {
   local theme
   theme="$(get-tmux-option "@tokyo" "night")"
 
-  if [ -f "$CURRENT_DIR/themes/{$theme}.tmuxtheme" ]; then
-    tmux source-file "$CURRENT_DIR/themes/${theme}.tmuxtheme"
-  fi
+  tmux source-file "$CURRENT_DIR/themes/${theme}.tmuxtheme"
 }
 
 main "$@"
